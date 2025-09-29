@@ -45,9 +45,6 @@ export default function SearchPage() {
         <div className="my-4">
           <div className="text-xs mb-2 text-gray-600">
             Results<br />
-            <span className="text-blue-700">
-              This list shows all packages which the api gave for the search query, this list should be scrollable.
-            </span>
           </div>
           <div className="max-h-24 overflow-y-auto">
             {results.map(pkg => (
@@ -71,13 +68,11 @@ export default function SearchPage() {
           onChange={e => setReason(e.target.value)}
           placeholder=""
         />
-        <Button type="submit" className="mt-2 float-right">
-          Submit
-        </Button>
+       
+        <div className="mt-4 text-right">
+          <Button type="submit">Submit</Button>
+        </div>
       </form>
-      <p className="mt-8 text-xs text-blue-600">
-        On Submit: Validate if user actually selected a package from radio list and also filled 'why'. Also make sure the same package is already not in the list.
-      </p>
     </div>
   );
 }
